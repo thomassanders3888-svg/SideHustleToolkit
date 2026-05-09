@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideHustleToolkit • AI Tools, Calculators & Experiments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        :root {
+            --primary: #6366f1;
+        }
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+        }
+        .tool-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .category-header {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center">
+                    <i class="fa-solid fa-rocket text-white text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-display text-2xl font-semibold tracking-tighter">SideHustleToolkit</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <a href="https://github.com/thomassanders3888-svg/SideHustleToolkit" 
+                   class="flex items-center gap-x-2 px-4 py-2 text-sm font-medium rounded-xl border border-zinc-700 hover:bg-zinc-900 transition-colors">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://github.com/thomassanders3888-svg?tab=repositories" 
+                   class="px-5 py-2 bg-white text-zinc-950 text-sm font-semibold rounded-xl hover:bg-zinc-100 transition-colors flex items-center gap-x-2">
+                    <span>Browse All Repos</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="pt-20 pb-16 max-w-5xl mx-auto px-6 text-center">
+        <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 mb-6">
+            <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+            <span class="text-sm font-medium text-emerald-400">30+ tools • Updated May 2026</span>
+        </div>
+        
+        <h1 class="text-6xl md:text-7xl font-display font-semibold tracking-tighter mb-6">
+            Build your<br>next side hustle.
+        </h1>
+        <p class="max-w-2xl mx-auto text-xl text-zinc-400 mb-10">
+            A curated collection of AI tools, financial calculators, no-code experiments, 
+            and creator resources. Fork. Remix. Launch.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#tools" 
+               class="px-8 py-3.5 bg-white text-zinc-950 font-semibold rounded-2xl hover:bg-zinc-100 transition-all flex items-center justify-center gap-x-2 text-lg">
+                <span>Explore Tools</span>
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="https://github.com/thomassanders3888-svg/SideHustleToolkit" 
+               class="px-8 py-3.5 border border-zinc-700 hover:bg-zinc-900 font-semibold rounded-2xl transition-all flex items-center justify-center gap-x-2 text-lg">
+                <i class="fa-brands fa-github"></i>
+                <span>Star on GitHub</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="max-w-5xl mx-auto px-6 pb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center">
+                <div class="text-4xl font-semibold text-white">30+</div>
+                <div class="text-zinc-400 mt-1">Tools & Experiments</div>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center">
+                <div class="text-4xl font-semibold text-white">7</div>
+                <div class="text-zinc-400 mt-1">Categories</div>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center">
+                <div class="text-4xl font-semibold text-white">100%</div>
+                <div class="text-zinc-400 mt-1">Free to Fork</div>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 text-center">
+                <div class="text-4xl font-semibold text-white">∞</div>
+                <div class="text-zinc-400 mt-1">Possibilities</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools Section -->
+    <div id="tools" class="max-w-7xl mx-auto px-6 pb-20">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <h2 class="text-4xl font-display font-semibold tracking-tight">All Tools</h2>
+                <p class="text-zinc-400 mt-2">Click any card to jump to the repo</p>
+            </div>
+            <a href="https://github.com/thomassanders3888-svg?tab=repositories" class="hidden md:flex items-center text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+                View all on GitHub <i class="fa-solid fa-external-link-alt ml-1.5 text-xs"></i>
+            </a>
+        </div>
+
+        <!-- AI & Productivity -->
+        <div class="mb-12">
+            <div class="flex items-center gap-x-3 mb-5">
+                <i class="fa-solid fa-robot text-2xl text-indigo-400"></i>
+                <h3 class="text-2xl font-semibold">AI & Productivity</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="https://github.com/thomassanders3888-svg/ai-tools-directory" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-indigo-500 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold text-lg group-hover:text-indigo-400 transition-colors">AI Tools Directory</div>
+                            <div class="text-sm text-zinc-400 mt-1">Curated directory of 100+ AI tools</div>
+                        </div>
+                        <i class="fa-solid fa-link text-zinc-500 group-hover:text-indigo-400"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/thomassanders3888-svg/prompt-library" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-indigo-500 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold text-lg group-hover:text-indigo-400 transition-colors">Prompt Library</div>
+                            <div class="text-sm text-zinc-400 mt-1">Ready-to-use AI prompts for creators</div>
+                        </div>
+                        <i class="fa-solid fa-link text-zinc-500 group-hover:text-indigo-400"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/thomassanders3888-svg/llm-compare" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-indigo-500 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold text-lg group-hover:text-indigo-400 transition-colors">LLM Compare</div>
+                            <div class="text-sm text-zinc-400 mt-1">Compare AI models side-by-side</div>
+                        </div>
+                        <i class="fa-solid fa-link text-zinc-500 group-hover:text-indigo-400"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Finance & Revenue -->
+        <div class="mb-12">
+            <div class="flex items-center gap-x-3 mb-5">
+                <i class="fa-solid fa-chart-line text-2xl text-emerald-400"></i>
+                <h3 class="text-2xl font-semibold">Finance & Revenue</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <a href="https://whatifinlearning.com/" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-emerald-500 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold text-lg group-hover:text-emerald-400 transition-colors">WhatiFin</div>
+                            <div class="text-sm text-zinc-400 mt-1">Financial planning game & calculators • Live site</div>
+                        </div>
+                        <i class="fa-solid fa-link text-zinc-500 group-hover:text-emerald-400"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/thomassanders3888-svg/indie-revenue-calc" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-emerald-500 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold text-lg group-hover:text-emerald-400 transition-colors">Indie Revenue Calculator</div>
+                            <div class="text-sm text-zinc-400 mt-1">Project your side hustle income</div>
+                        </div>
+                        <i class="fa-solid fa-link text-zinc-500 group-hover:text-emerald-400"></i>
+                    </div>
+                </a>
+                <a href="https://github.com/thomassanders3888-svg/salary-negotiator" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-emerald-500 group">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold text-lg group-hover:text-emerald-400 transition-colors">Salary Negotiator</div>
+                            <div class="text-sm text-zinc-400 mt-1">Get paid what you're worth</div>
+                        </div>
+                        <i class="fa-solid fa-link text-zinc-500 group-hover:text-emerald-400"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- No-Code & SaaS + Marketing -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- No-Code -->
+            <div>
+                <div class="flex items-center gap-x-3 mb-5">
+                    <i class="fa-solid fa-cube text-2xl text-amber-400"></i>
+                    <h3 class="text-2xl font-semibold">No-Code & SaaS</h3>
+                </div>
+                <div class="space-y-3">
+                    <a href="https://github.com/thomassanders3888-svg/no-code-marketplace" class="flex items-center justify-between bg-zinc-900 border border-zinc-800 hover:border-amber-500 transition-colors rounded-2xl px-5 py-4 group">
+                        <div class="font-medium group-hover:text-amber-400">NoCode Marketplace</div>
+                        <i class="fa-solid fa-arrow-right text-zinc-500 group-hover:text-amber-400"></i>
+                    </a>
+                    <a href="https://github.com/thomassanders3888-svg/saas-status" class="flex items-center justify-between bg-zinc-900 border border-zinc-800 hover:border-amber-500 transition-colors rounded-2xl px-5 py-4 group">
+                        <div class="font-medium group-hover:text-amber-400">SaaS Status Monitor</div>
+                        <i class="fa-solid fa-arrow-right text-zinc-500 group-hover:text-amber-400"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Marketing & Creator -->
+            <div>
+                <div class="flex items-center gap-x-3 mb-5">
+                    <i class="fa-solid fa-bullhorn text-2xl text-pink-400"></i>
+                    <h3 class="text-2xl font-semibold">Marketing & Creator Tools</h3>
+                </div>
+                <div class="space-y-3">
+                    <a href="https://github.com/thomassanders3888-svg/couponhub" class="flex items-center justify-between bg-zinc-900 border border-zinc-800 hover:border-pink-500 transition-colors rounded-2xl px-5 py-4 group">
+                        <div class="font-medium group-hover:text-pink-400">CouponHub</div>
+                        <i class="fa-solid fa-arrow-right text-zinc-500 group-hover:text-pink-400"></i>
+                    </a>
+                    <a href="https://github.com/thomassanders3888-svg/habit-tracker" class="flex items-center justify-between bg-zinc-900 border border-zinc-800 hover:border-pink-500 transition-colors rounded-2xl px-5 py-4 group">
+                        <div class="font-medium group-hover:text-pink-400">Habit Tracker</div>
+                        <i class="fa-solid fa-arrow-right text-zinc-500 group-hover:text-pink-400"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Energy & Games -->
+        <div class="mt-12">
+            <div class="flex items-center gap-x-3 mb-5">
+                <i class="fa-solid fa-globe text-2xl text-teal-400"></i>
+                <h3 class="text-2xl font-semibold">Energy, Advocacy & Games</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="https://github.com/thomassanders3888-svg/nuclear-energy-movement" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-teal-500 group">
+                    <div class="font-semibold group-hover:text-teal-400">Nuclear Energy Movement</div>
+                    <div class="text-sm text-zinc-400 mt-1">Advocacy & resources</div>
+                </a>
+                <a href="https://github.com/thomassanders3888-svg/gamehub" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-teal-500 group">
+                    <div class="font-semibold group-hover:text-teal-400">GameHub</div>
+                    <div class="text-sm text-zinc-400 mt-1">Arcade games + PayPal</div>
+                </a>
+                <a href="https://github.com/thomassanders3888-svg/WhatiFin" class="tool-card bg-zinc-900 border border-zinc-800 rounded-3xl p-5 hover:border-teal-500 group">
+                    <div class="font-semibold group-hover:text-teal-400">Tetris & Finance Games</div>
+                    <div class="text-sm text-zinc-400 mt-1">Educational games inside WhatiFin</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="bg-zinc-900 border-t border-zinc-800 py-16">
+        <div class="max-w-2xl mx-auto text-center px-6">
+            <h2 class="text-4xl font-display font-semibold tracking-tight mb-4">Ready to build?</h2>
+            <p class="text-zinc-400 mb-8">Every tool here is open source. Fork what you need and make it yours.</p>
+            
+            <a href="https://github.com/thomassanders3888-svg/SideHustleToolkit" 
+               class="inline-flex items-center gap-x-3 px-8 py-4 bg-white text-zinc-950 font-semibold rounded-2xl hover:bg-zinc-100 transition-all text-lg">
+                <span>Star & Fork on GitHub</span>
+                <i class="fa-brands fa-github text-xl"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="border-t border-zinc-800 py-8 text-center text-sm text-zinc-500">
+        <div class="max-w-7xl mx-auto px-6">
+            Made with ❤️ by <a href="https://github.com/thomassanders3888-svg" class="hover:text-white transition-colors">@thomassanders3888-svg</a> • May 2026
+        </div>
+    </footer>
+
+    <script>
+        // Simple confetti on hero click (fun touch)
+        document.querySelector('h1').addEventListener('click', () => {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+        
+        // Tailwind script
+        function initializeTailwind() {
+            // Already handled by CDN
+        }
+        window.onload = initializeTailwind;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</body>
+</html>
